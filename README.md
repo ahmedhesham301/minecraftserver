@@ -24,7 +24,7 @@ Ensure you have the following installed on your system:
    cd minecraftserver
 2. **Build the image**:
     ```bash
-   docker build -t minecraftserver --build-arg VERSION="1.21.4"
+   docker build --build-arg VERSION="1.21.4" -t minecraftserver:1.0 .
 2. **Run the container**:
     ```bash
-   docker container run -p 25565:25565 minecraftserver
+   docker container run -p 25565:25565 minecraftserver:1.0
