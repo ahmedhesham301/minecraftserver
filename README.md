@@ -27,7 +27,7 @@ Ensure you have the following installed on your system:
    ```
    to choose a specific version use 
    --build-arg VERSION="version"
-   by defaultit is set to latest 
+   by default it is set to latest 
 2. **Run the container**:
     ```bash
    docker container run -p 25565:25565 minecraftserver:1.0
