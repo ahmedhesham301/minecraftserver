@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /server
 
-ARG VERSION="1.21.4"
+ARG VERSION="latest"
 ARG TYPE="vanilia"
 
 COPY setup.sh .

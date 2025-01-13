@@ -1,11 +1,12 @@
 #!/bin/bash
 
-
-
 #get the versions manifest
 versionManifestUrl=https://launchermeta.mojang.com/mc/game/version_manifest.json
 wget -O version_manifest.json $versionManifestUrl 
 #get the manifest of the specifed version
+if [[ $VERSION == "latest" ]]; then
+    VERSION=$(jq -r ".latest.release" version_manifest.json)
+fi
 manifest=$(jq -r ".versions[] | select(.id == \"$VERSION\").url" version_manifest.json)
 wget -O manifest.json  $manifest
 #get the download url

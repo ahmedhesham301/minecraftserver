@@ -5,7 +5,6 @@ This repository contains scripts to automate the setup and management of a Minec
 ## Features
 
 - **Automated Setup**: Scripts to build and run a Minecraft server(only vanilla for now).
-- **Docker Integration**: Utilizes Docker for containerized server management.
 - **Easy Configuration**: Simplifies the process of setting up a Minecraft server.
 
 ## Prerequisites
@@ -24,7 +23,11 @@ Ensure you have the following installed on your system:
    cd minecraftserver
 2. **Build the image**:
     ```bash
-   docker build --build-arg VERSION="1.21.4" -t minecraftserver:1.0 .
+   docker build -t minecraftserver:1.0 .
+   ```
+   to choose a specific version use 
+   --build-arg VERSION="version"
+   by defaultit is set to latest 
 2. **Run the container**:
     ```bash
    docker container run -p 25565:25565 minecraftserver:1.0
