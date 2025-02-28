@@ -1,7 +1,5 @@
 #!/bin/bash
-apt update -y
-apt upgrade -y
+apk update 
+apk upgrade
 
-apt install wget -y
-apt install jq -y
-apt install default-jre-headless -y
+apk add jq

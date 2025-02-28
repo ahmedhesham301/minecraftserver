@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM alpine/java:22-jre 
 
 WORKDIR /server
 
@@ -7,9 +7,9 @@ ARG TYPE="vanilia"
 
 COPY . .
 
-RUN bash setup.sh
-RUN bash build-vanilia.sh
+RUN sh setup.sh
+RUN sh build-vanilia.sh
 
-CMD [ "bash","run.sh" ]
+CMD [ "sh","run.sh" ]
 
 EXPOSE 25565
